@@ -13,4 +13,13 @@ import org.junit.jupiter.api.Test;
  */
 public class StorageServiceTest {
   // TODO: Write StorageService Tests
+
+  @Test
+  @DisplayName("Tests the constructor")
+  void testConstructor() {
+    StorageService storage = new StorageService();
+    assertNotNull(storage);
+  }
+
+
 }

@@ -13,4 +13,6 @@ import org.junit.jupiter.api.Test;
 public class EmailFinderTest {
   // TODO: write email finder tests
 
+  EmailFinder finder = new EmailFinder();
+
 }

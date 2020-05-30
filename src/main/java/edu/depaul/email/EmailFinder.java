@@ -48,5 +48,4 @@ public class EmailFinder {
     EmailFinder finder = new EmailFinder();
     finder.run(args);
   }
-
 }
