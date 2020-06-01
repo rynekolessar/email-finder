@@ -1,4 +1,5 @@
 package edu.depaul.email;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.jsoup.nodes.Document;
