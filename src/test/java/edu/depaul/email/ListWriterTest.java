@@ -4,11 +4,25 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-/**
- * Since ListWriter is constructed with an OutputStream, you can pass in the object of your choosing
- * and then verify it contains the expected results after you call writeList. You can consider using
- * a mock here or just a handier OutputStream implementation such as a ByteArrayOutputStream.
- */
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class ListWriterTest {
-  // TODO: Write ListWriter Tests
+
+    @Test
+    @DisplayName("Tests that the writeList() method returns the correct results")
+    void testWriteList() throws IOException {
+        OutputStream stream = new ByteArrayOutputStream();
+        ListWriter writer = new ListWriter(stream);
+        String expected = "test\ntest\ntest\n";
+
+        Collection<String> collection = new ArrayList<>();
+        collection.add("test");
+        collection.add("test");
+        collection.add("test");
+        writer.writeList(collection);
+
+        assertEquals(expected,stream.toString());
+    }
 }
