@@ -31,6 +31,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.4.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>2.22.0</version>
@@ -57,10 +63,9 @@
       <version>1.13.1</version>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <version>5.4.2</version>
-      <scope>test</scope>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs</artifactId>
+      <version>4.0.3</version>
     </dependency>
   </dependencies>
 
@@ -101,10 +106,6 @@
         <configuration>
           <finalName>email-finder</finalName>
           <appendAssemblyId>false</appendAssemblyId>
-          <descriptorRefs>
-            <descriptorRef>src</descriptorRef>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
           <descriptors>
             <descriptor>src/assembly/assembly.xml</descriptor>
           </descriptors>
@@ -140,13 +141,6 @@
             </goals>
           </execution>
         </executions>
-        <dependencies>
-          <dependency>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs</artifactId>
-            <version>4.0.3</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>
